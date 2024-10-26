@@ -36,6 +36,7 @@ Uses Firebase to store rule ASTs and metadata. The configuration file "database.
    - Configure Firebase in `config/database.json`.
 
 4. **Running the Application**:
+   
     Create and Activate a virtual environment.
 
     python -m venv venv       #create
@@ -43,7 +44,8 @@ Uses Firebase to store rule ASTs and metadata. The configuration file "database.
     .\venv\Scripts\activate   #activate
    
 
-5.  ** Running the Application**:
+5.  **Running the Application**:
+   
       python app.py 
   
 
