@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine with AST</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+    <h1>Rule Engine with AST</h1>
+    <div class="container">
+        <!-- Top row for creating, combining, and evaluating rules -->
+        <div class="top-row">
+            <!-- Section for creating a rule -->
+            <div class="box">
+                <h2>Create Rule</h2>
+                <form id="ruleForm">
+                    <label for="rule">Enter Rule (e.g., age > 30 AND exp < 3):</label>
+                    <input type="text" id="rule" placeholder="e.g., age > 30 AND exp < 3">
+                    <button type="button" onclick="createRule()">Create Rule</button>
+                </form>
+                <div id="output"></div>
+            </div>
+
+            <!-- Section for combining rules -->
+            <div class="box">
+                <h2>Combine Rules</h2>
+                <form id="combineForm">
+                    <label for="rule_ids">Enter Rule IDs to Combine (comma-separated):</label>
+                    <input type="text" id="rule_ids" placeholder="e.g., 1,2">
+                    <button type="button" onclick="combineRules()">Combine Rules</button>
+                </form>
+                <div id="output"></div>
+            </div>
+
+            <!-- Section for evaluating a rule -->
+            <div class="box">
+                <h2>Evaluate Rule</h2>
+                <form id="evaluateForm">
+                    <label for="rule_id">Rule ID:</label>
+                    <input type="text" id="rule_id" placeholder="e.g., 1">
+                    <label for="data">Data (JSON array):</label>
+                    <input type="text" id="data" placeholder="e.g., [{'age': 19}, {'age': 46}, {'age': 78}]">
+                    <button type="button" onclick="evaluateRule()">Evaluate Rule</button>
+                </form>
+                <div id="evaluation_results"></div>
+            </div>
+        </div>
+
+        <!-- Section to display all existing rules from the database -->
+        <div class="box full-width">
+            <h2>Existing Rules</h2>
+            <ul id="rules_list"></ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
