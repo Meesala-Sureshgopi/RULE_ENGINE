@@ -27,22 +27,25 @@ Uses Firebase to store rule ASTs and metadata. The configuration file "database.
 1. **Clone the repository**:
 
    git clone https://github.com/Meesala-Sureshgopi/Rule_Engine.git
+   
    cd Rule_Engine
    
 
-2. **Setup Environment**:
+3. **Setup Environment**:
    - Install dependencies with `pip install -r requirements.txt`.
    - Configure Firebase in `config/database.json`.
 
-3. **A Running the Application**:
-    Create and Activate virtual environment.
+4. **A Running the Application**:
+    Create and Activate a virtual environment.
 
     python -m venv venv       #create
+   
     .\venv\Scripts\activate   #activate
+   
 
    **B Running the Application**:
    python app.py 
   
 
-4. **Usage**:
-   Based on requirements create, combine and evalute rules with json data.
+6. **Usage**:
+   Based on requirements create, combine, and evaluate rules with JSON data.
